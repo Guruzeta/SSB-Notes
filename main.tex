@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper, left=1in, right=1in, top=1.5in, bottom=1in]{geometry}
+\title{Notes on Spontaneous Symmetry Breaking}
+\author{Guru Kalyan Jayasingh}
+\date{June 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Broad Overview of Symmetry Breaking}
+Definition:
+
+When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$, 
+s.t. $\comm{\hat{H}}{U}=0$\\(i.e. it's a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.\\
+\\
+Observation 1: For every such $\ket{\Psi}$, there exists a multitude of states $\ket{\Phi}$ s.t. they're degenerate. 
+One can generate the set {$\ket{\Phi}$} by the rule $\ket{\Phi}\;=\;\hat{U}\ket{\Psi}$.\\
+Check that $E_{\ket{\Psi}}\;=\;E_{\ket{\Phi}}$.\\
+\\
+Order Parameter Operator: For the set of *broken* symmetry states, one can define an order parameter operator $\hat{O}$.
+The action of this operator is defined as:
+\begin{itemize}
+    \item 
+        Each of the symmetry related states {$\ket{\Phi}$} are the eigenstates of this operator with distinct non-zero eigenvalues.
+    \item The expectation value $\hat{O}$ in a symmetric state is 0. 
+\end{itemize}
+In general $\comm{\hat{O}}{\hat{H}}\neq 0$ (however there are *cases* where it happens to be true as well).\\
+Observation 2: For the general case, we can see that $\ket{\Psi}$ will not be an Energy eigenstate. Moreover, it cannot be a thermal mixture of energy eigenstates.\\
+Proof: Taking $\comm{\hat{O}}{\hat{H}}\neq 0$, it can't be an eigenket since that would imply $\hat{H}$ and $\hat{O}$ commute.
+For the thermal mixture case, let 
+$$\ket{\Psi}\;=\;\sum e^{-\beta E_n }\ket{n}$$
+$$\implies \hat{H}\ket{\Psi}\;=\;\pdv{\ket{\Psi}}{\beta}$$
+$$\implies \hat{O}\hat{H}\ket{\Psi}\;=\; \hat{O}\pdv{\ket{\Psi}}{\beta}\;=\;\pdv{\hat{O}\ket{\Psi}}{\beta}$$
+$$\implies \hat{O}\hat{H}\ket{\Psi}\;= O \pdv{\ket{\Psi}}{\beta} $$
+$$\implies \comm{\hat{H}}{\hat{O}}=0$$
+\\
+Conclusion: Clearly the symmetry broken state $\ket{\Psi}$ isn't in a thermal equilibrium! Then shouldn't these states be unstable? 
+No. We do get to observe them in day-day life and these clearly unequivocally exist with large lifetimes(and hence are stable in the colloquial sense).
+How does this happen then? Ans - Due to the large singularity of thermodynamic limit. \\
+At Thermodynamic limit( $N\rightarrow \infty$, $V\rightarrow \infty$ with $\displaystyle{\frac{N}{V}=\; constant}$) :
+\begin{itemize}
+    \item  $<\comm{\hat{H}}{\hat{O}}>\;=\;0$
+    \item SSB states become orthogonal to each other i.e. $\braket{\Phi}{\Psi}=0$
+    \item SSB states become degenerate with Symmetric energy eigenstates, thus becoming eigenstates themselves. Hence they can occur in thermal equilibrium.
+\end{itemize}
+Thermodynamic limit, being qualitatively different as above from large finite N,V makes the limit itself a singular one(defined below). Ergo - Thermodynamic limit is an idealisation, only to serve as a guide and not a real description.\\
+\\
+Observation 3: Symmetric Hamiltonians (by symmetry here a global symmetry is implied) exhibit the following properties:
+
+\begin{itemize}
+    \item The decompostion of $\hat{H}\;=\;\hat{H_0} + \sum_{\Vec{K}}\hat{H}_{\Vec{K}}$ is possible, where the 1st part realizes $\Vec{k}=0$ part of the F.T. i.e. Centre of Mass part and the 2nd part describes internal degrees of freedom(basically a fourier decomposition into different non-zero and zero $\Vec{k}$ parts).
+    \item $\comm{\hat{H}_0}{\sum_{\Vec{K}}\hat{H}_{\Vec{K}}}\;=\;0$
+\end{itemize}
+
+\end{document}
