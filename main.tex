@@ -1,26 +1,67 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{physics}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{amssymb}
+\usepackage{ mathrsfs }
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[a4paper, left=1in, right=1in, top=1.5in, bottom=1in]{geometry}
-\title{Notes on Spontaneous Symmetry Breaking}
-\author{Guru Kalyan Jayasingh}
-\date{June 2020}
+
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\usepackage[a4paper, left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\title{\Huge{Notes on Spontaneous Symmetry Breaking}}
+\author{\Large{Guru Kalyan Jayasingh}}
+\date{\Large{June 2020}}
 
 \begin{document}
 
+\begin{titlingpage}
 \maketitle
+\end{titlingpage}
 
+
+
+\large
 \section{Broad Overview of Symmetry Breaking}
 Definition:
 
-When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$, 
-s.t. $\comm{\hat{H}}{U}=0$\\(i.e. it's a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.\\
+When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$
+s.t. $\comm{\hat{H}}{U}=0$ (i.e. $\hat{U}$ is a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.\\
+\\
+Clarification: Corresponding to every physical symmetry operation (say $\mathcal{G}$, e.g. translation, rotation etc.) of the system, $\exists$ $\hat{U}$ to implement it in $\mathscr{H}$ (the corresponding Hilbert space). $\ket{\Psi}$ violates $\mathcal{G}$, not $\hat{U}$. \\
+\newline
+Why is this baffling?\\  
+Classically, we reason that since the equations governing the system are symmetric under $\mathcal{G}$, so should the actual state be (here I refer to classical state in a dynamical sense i.e look at macrostates). Hence Spontaneous symmetry breaking (a.k.a SSB) can be thought about understanding how symmetry in microscopic descriptions are broken on a macroscopic/grand scale.\\
+Q. Mechanically, one can motivate the idea through the following quandary:-\\
+\\
+\textbf{Proof that crystals can't exist at all temperatures:}\\
+Take the following crytal hamiltonian
+$$\hat{H}\;=\;\sum_i \frac{p_i^2}{2m}+\sum_{i<j}V(\Vec{r}_i-\Vec{r_j})$$
+Now, arbitrary global translations are a symmetry of $\mathcal{H}$, characterised by the operator $\hat{U}\;=\;\hat{T}_{\Vec{\eta}}$, for $\Vec{\eta}$ being the translation. Also $\comm{\hat{H}}{\hat{T}_{\Vec{\eta}}}=\;0$. Now, in a crystal the density is modulated i.e. $\rho_{obs}(x)\;=\;\rho_{obs}(x+a)$ for $a$ being a crystal translation vector.\\
+However look at the following
+\begin{align*}
+    <\hat{\rho(x+\eta)}> &= \;\frac{1}{Z}Tr(e^{-\beta \hat{H}}\hat{T}_{\Vec{\eta}}\;\hat{\rho}(x)\;\hat{T}^{-1}_{\Vec{\eta}} ) \\
+    \implies\; <\hat{\rho(x+\eta)}>\;&=\; <\hat{\rho(x)}>
+\end{align*}
+Hence density cannot stay modulated and a crystal cannot be observed, contrary to empirical observation. So what gives?\\
+Clearly one of our assumptions while using statistical averages is wrong and as it turns out, it's the assumption of \textbf{ergodicity}. We'll see how it comes, but the gist is that on experimental timescales, system cannot explore all parts of the phase space with some statistical weight.\\
+\\
+Caution: SSB isn't a purely quantum phenomenon.\\
+\newline
+In the spirit of QFT, one can say that SSB describes systems in which $\mathcal{L}$ has a symmetry, but the lowest order vacuum solutions don't possess the said symmetry (although we'll explore the statistical side of SSB, leaving such cases aside).\\
 \\
 Observation 1: For every such $\ket{\Psi}$, there exists a multitude of states $\ket{\Phi}$ s.t. they're degenerate. 
 One can generate the set {$\ket{\Phi}$} by the rule $\ket{\Phi}\;=\;\hat{U}\ket{\Psi}$.\\
-Check that $E_{\ket{\Psi}}\;=\;E_{\ket{\Phi}}$.\\
-\\
+Check that $E_{\ket{\Psi}}\;=\;E_{\ket{\Phi}}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;--(1)$.\\ 
+\newline
 Order Parameter Operator: For the set of *broken* symmetry states, one can define an order parameter operator $\hat{O}$.
 The action of this operator is defined as:
 \begin{itemize}
@@ -28,7 +69,8 @@ The action of this operator is defined as:
         Each of the symmetry related states {$\ket{\Phi}$} are the eigenstates of this operator with distinct non-zero eigenvalues.
     \item The expectation value $\hat{O}$ in a symmetric state is 0. 
 \end{itemize}
-In general $\comm{\hat{O}}{\hat{H}}\neq 0$ (however there are *cases* where it happens to be true as well).\\
+In general $\comm{\hat{O}}{\hat{H}}\neq 0$ (however $\exists$ exceptional *cases* where it happens to be true).\\
+\\
 Observation 2: For the general case, we can see that $\ket{\Psi}$ will not be an Energy eigenstate. Moreover, it cannot be a thermal mixture of energy eigenstates.\\
 Proof: Taking $\comm{\hat{O}}{\hat{H}}\neq 0$, it can't be an eigenket since that would imply $\hat{H}$ and $\hat{O}$ commute.
 For the thermal mixture case, let 
@@ -47,13 +89,110 @@ At Thermodynamic limit( $N\rightarrow \infty$, $V\rightarrow \infty$ with $\disp
     \item SSB states become orthogonal to each other i.e. $\braket{\Phi}{\Psi}=0$
     \item SSB states become degenerate with Symmetric energy eigenstates, thus becoming eigenstates themselves. Hence they can occur in thermal equilibrium.
 \end{itemize}
-Thermodynamic limit, being qualitatively different as above from large finite N,V makes the limit itself a singular one(defined below). Ergo - Thermodynamic limit is an idealisation, only to serve as a guide and not a real description.\\
-\\
+These states can therefore \textbf{exist} in the thermodynamic limit.\\
+Thermodynamic limit, being qualitatively different as above from large finite N,V makes the limit itself a singular one(defined below). Ergo - Thermodynamic limit is an idealisation, only to serve as a guide and not a real description.
+\subsection{What happens for finite N?}
 Observation 3: Symmetric Hamiltonians (by symmetry here a global symmetry is implied) exhibit the following properties:
 
 \begin{itemize}
     \item The decompostion of $\hat{H}\;=\;\hat{H_0} + \sum_{\Vec{K}}\hat{H}_{\Vec{K}}$ is possible, where the 1st part realizes $\Vec{k}=0$ part of the F.T. i.e. Centre of Mass part and the 2nd part describes internal degrees of freedom(basically a fourier decomposition into different non-zero and zero $\Vec{k}$ parts).
     \item $\comm{\hat{H}_0}{\sum_{\Vec{K}}\hat{H}_{\Vec{K}}}\;=\;0$
+\end{itemize}\\
+\textbf{Question}: What if the quantity $H_0\;=\int \hat{H}(\Vec{r_i},\Vec{p_i})\; \Pi_{i=1}^N d^3\Vec{r_i}$ diverges?\\ Since energy is an extensive property of the system, won't it exclusively depend on the volume of the system as such (for e.g. set $\hat{H_0}\;=\;\hat{H}_{SHO})$?\\
+\\
+Claim: The \textbf{global} symmetry breaking can be explained only by using $\hat{H}_0$ part of $\hat{H}$.\\
+\\
+Example: For a solid, the exact hamiltonian looks like 
+$$\hat{H}\;=\;\sum_i \frac{p_i^2}{2m}+\sum_{i<j}V(\Vec{r}_i-\Vec{r_j})$$
+Although the system has translational symmetry, when we observe daily life objects like a rock, they don't exhibit the symmetry of the hamiltonian i.e. they aren't delocalised over all space. Now for this, the collective part of the hamiltonian describes the C.O.M motion or the motion of N atoms on mass m moving in unison.\\
+In free space, this motion corresponds to a free particle with M = mN and the lowest energy level spacing scales as $\frac{1}{N}$.\\
+
+
+\textbf{Tower of States}: 
+These low lying energy levels of the solid makeup what's called the \textbf{tower of states}.
+Important to note that the states( which are eigenstates of $\hat{\Vec{P}}_{total}$ and hence behave like a \textbf{delocalised wave} over the whole space) are collective excitations of the whole system and as such are non-local.\\
+\\
+Non local in what sense? - Can't be written as $\bigotimes \ket{\Psi}_j$, for $\ket{\Psi}_j$ being single particle states(in a general basis that is).
+Because they're non-local, as the system size increases, they become increasingly unstable towards local interactions, hence not observed in daily life(\textbf{Why?}).\\
+\\
+\textbf{Question}: Why is the GS of the true system only the eigenstate of the collective part?\\
+(It seems plausible on energy grounds, since the collective part shall offer lowest energy, but the argument is motivated by a classical picture - basically net energy of the system = $E_{COM}$ + $E_{system\;wrt\;COM}$, hence lowest energy contributions come from COM)\\
+\\
+Now what happens to stable states in this analysis?
+\begin{itemize}
+    \item Clearly they aren't one of these low lying\textbf{ symmetric}( i.e. wrt global symmetry of the system, for e.g. in case of a solid, states exhibiting translational invariance) eigenstates of the collective hamiltonian.\\
+    This is from daily observation that these states are the normal SSB states.
+    \item If not eigenstates, then these are superpositions of the low lying eigenstates (\textbf{Why?}).
+    \item Now since low lying energy gap scales as $\displaystyle{\frac{1}{N}}$, for large N, they squeeze up and hence the energy uncertainty reduces for the stable SSB state.
+    \item This makes them almost degenerate(i.e. $<E> \approx E_n$) in the large N limit and has energy close to exact GS of the hamiltonian(\textbf{Why?}).
+    \item Overlap between SSB states now scales as $\exp{-N}$ and hence tunneling probability to another SSB state is suppressed.
+    
+    
+    \item Why are they stable? Simply because they are local(unlike the symmetric states), can be written as  $\bigotimes \ket{\Psi}_j$ and are stable against local perturbations. 
+   
 \end{itemize}
+\\
+Now for finite N, a symmetric H clearly cannot induce an SSB GS. One is forced to consider a \textbf{symmetry breaking perturbation} that singles out a particular SSB state out of the many degenerate,stable SSB states.\\
+Why the Spontaneous(the 1st \text{S}) in SSB? - Large system are exceedingly sensitive to even a small perturbation. Latter  suffices to single out a particular SSB state. Hence the termed "Spontaneus".\\
+\\
+$\hat{H}_0\;+\;\hat{H}_{sb\;perturb}$ = SSB GS of the full system!\\
+In thermodynamic limit, the GS is an eigenstate of the order parameter operator (why? - Since here SSB states are orthogonal).\\
+But without $\hat{H}_{sb\;perturb}$, the GS is symmetric for \textbf{any} system size. This clarifies that the thermodynamic limit is singular - adding or subtracting $\hat{H}_{sb\;perturb}$ changes the fate of GS itself, even qualitatively.\\
+\newline
+\textbf{The Ergodicity Breakdown}
+\begin{itemize}
+    \item $\braket{\Phi_{ssb}}{\Psi_{ssb}}\approx\;\exp(-N)$ - exponentially suppressed.
+    \item Hence for all practical purposes, one can treat as if the system has only \textbf{1} SSB GS.
+    \item All other SSB states are inaccessible with the entire dynamics taking place in the particular SSB state and it's excitations.
+    \item Ergodicity breaks - System only lives( "explores") a restricted Hilbert space. The rest of phase space isn't accessible on \textbf{experimental timescales}.
+    \item However, if one wants to study physics of phase transitions, then clearly the system visits a different SSB GS.
+    \item Moral - Global Thermal equilibrium isn't reached. Ex: Disordered Glasses
+\end{itemize}
+Suggested Paper: R. G. Palmer,\textit{ Broken ergodicity}, Adv. Phys. 31, 669 (1982).\\
+\href{https://www.tandfonline.com/doi/abs/10.1080/00018738200101438}{doi:10.1080/00018738200101438.}
+
+\section{Singular Limits}
+Example of Singular Limit:
+$<section\; 2.3 \;and\; 2.4\;>$
+
+
+\section{A Classical Example: Magnetism}
+The idea that different symmetry broken states could be degenerate seems to be at a *conundrum*. For $\ket{\Psi}$, (1) states that SSB states are degenerate (one checks that in (1), $\ket{\phi}$ is a different SSB state since it should in general have different eigenvalue via $\hat{O}$).\\
+To explore the same statement in classical physics, one takes following model of a classical magnet
+\begin{align}
+    \mathcal{H}\;=\;\sum_{\Vec{x},\Vec{\delta}} - \abs{J} \Vec{S}_{\Vec{x}}\cdot\Vec{S}_{\Vec{x }+\Vec{\delta}}
+\end{align}
+accounting for nearest neighbour interaction.
+\begin{enumerate}
+    \item For minm. E, align every magnet in same direction.$\exists$ a global $SO(3)$ symmetry of spin rotations in $R^3$, leaving the configurations degenerate.
+    \item $<M>$ = $\displaystyle{\frac{e^{(-\beta E_{state})}\cdot M_{state}}{Z}}$ = 0 (think why). So no net magnetisation( at \textbf{any T}).
+    \item Above is in a contradiction to the fact that we can see a *net* magnetism at room temp for various substances.
+\end{enumerate}
+Resolution: Introduce a small symmetry breaking term in $\mathcal{H}$.
+\begin{align}
+    \mathcal{H}\;=\;\sum_{\Vec{x},\Vec{\delta}} - \abs{J} \Vec{S}_{\Vec{x}}\cdot\Vec{S}_{\Vec{x }+\Vec{\delta}} - h\hat{n}\cdot\Vec{S}_{\Vec{x}}
+\end{align}
+i.e. essentially add a small magnetic field(set h=0 at the end).\\
+Now 
+\begin{enumerate}
+    \item  $<M>$ = $Ns\hat{n}$ at T=0, for $s= M_{per\;spin}$.( think why)
+    \item  A set of non-commuting limits emerge
+        \begin{align*}
+              &\lim_{h\to 0}\lim_{N\to \infty} \frac{<M>}{N}\;=\;s\\
+              &\lim_{N\to \infty}\lim_{h\to 0} \frac{<M>}{N}\;=\;0
+        \end{align*}
+    \item What do the limits mean for magnets in our everyday world? \\
+    Suppose we start with a finite sample of spins and then take the thermodynamic limit of $\lim{N\to\infty}$. Now this limit can be taken at the behest of an **arbitrarily** small magnetic field. First we set $B=0$. Clearly none in the compact sample of spins get magnetised and now if we take thermodynamic limit, we find that the average spin was and still is 0.
+    \item Now suppose we ramp up a small $B$ and let the compact sample acquire a small moment. Take $\lim{N\to\infty}$. Switch $B=0$. What we find now is that the sample still has a **net** moment. This holds for arbitrarily weak $B$. The spontaneity of the evolution comes from a qualitative change of outcome even in the presence of a minuscule \textbf{magnetic history}.
+\end{enumerate}
+Q. What was the point of getting to know "classically SSB states might not be degenerate"? - Clear to see. arbitrary
+$\hat{n}$ leads to same energy in
+$\lim_{h\to 0}$, situation at 0 K.
+
+\section{Harmonic Crystal}
+Collective $\mathcal{H}$ calculation:-\\
+
+
+
 
 \end{document}
