@@ -5,7 +5,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \usepackage{amssymb}
@@ -38,7 +38,7 @@ s.t. $\comm{\hat{H}}{U}=0$ (i.e. $\hat{U}$ is a symmetry of the system), then th
 \\
 Clarification: Corresponding to every physical symmetry operation (say $\mathcal{G}$, e.g. translation, rotation etc.) of the system, $\exists$ $\hat{U}$ to implement it in $\mathscr{H}$ (the corresponding Hilbert space). $\ket{\Psi}$ violates $\mathcal{G}$, not $\hat{U}$. \\
 \newline
-Why is this baffling?\\  
+Why is this baffling?\\
 Classically, we reason that since the equations governing the system are symmetric under $\mathcal{G}$, so should the actual state be (here I refer to classical state in a dynamical sense i.e look at macrostates). Hence Spontaneous symmetry breaking (a.k.a SSB) can be thought about understanding how symmetry in microscopic descriptions are broken on a macroscopic/grand scale.\\
 Q. Mechanically, one can motivate the idea through the following quandary:-\\
 \\
@@ -58,29 +58,29 @@ Caution: SSB isn't a purely quantum phenomenon.\\
 \newline
 In the spirit of QFT, one can say that SSB describes systems in which $\mathcal{L}$ has a symmetry, but the lowest order vacuum solutions don't possess the said symmetry (although we'll explore the statistical side of SSB, leaving such cases aside).\\
 \\
-Observation 1: For every such $\ket{\Psi}$, there exists a multitude of states $\ket{\Phi}$ s.t. they're degenerate. 
+Observation 1: For every such $\ket{\Psi}$, there exists a multitude of states $\ket{\Phi}$ s.t. they're degenerate.
 One can generate the set {$\ket{\Phi}$} by the rule $\ket{\Phi}\;=\;\hat{U}\ket{\Psi}$.\\
-Check that $E_{\ket{\Psi}}\;=\;E_{\ket{\Phi}}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;--(1)$.\\ 
+Check that $E_{\ket{\Psi}}\;=\;E_{\ket{\Phi}}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;--(1)$.\\
 \newline
 Order Parameter Operator: For the set of *broken* symmetry states, one can define an order parameter operator $\hat{O}$.
 The action of this operator is defined as:
 \begin{itemize}
-    \item 
+    \item
         Each of the symmetry related states {$\ket{\Phi}$} are the eigenstates of this operator with distinct non-zero eigenvalues.
-    \item The expectation value $\hat{O}$ in a symmetric state is 0. 
+    \item The expectation value $\hat{O}$ in a symmetric state is 0.
 \end{itemize}
 In general $\comm{\hat{O}}{\hat{H}}\neq 0$ (however $\exists$ exceptional *cases* where it happens to be true).\\
 \\
 Observation 2: For the general case, we can see that $\ket{\Psi}$ will not be an Energy eigenstate. Moreover, it cannot be a thermal mixture of energy eigenstates.\\
 Proof: Taking $\comm{\hat{O}}{\hat{H}}\neq 0$, it can't be an eigenket since that would imply $\hat{H}$ and $\hat{O}$ commute.
-For the thermal mixture case, let 
+For the thermal mixture case, let
 $$\ket{\Psi}\;=\;\sum e^{-\beta E_n }\ket{n}$$
 $$\implies \hat{H}\ket{\Psi}\;=\;\pdv{\ket{\Psi}}{\beta}$$
 $$\implies \hat{O}\hat{H}\ket{\Psi}\;=\; \hat{O}\pdv{\ket{\Psi}}{\beta}\;=\;\pdv{\hat{O}\ket{\Psi}}{\beta}$$
 $$\implies \hat{O}\hat{H}\ket{\Psi}\;= O \pdv{\ket{\Psi}}{\beta} $$
 $$\implies \comm{\hat{H}}{\hat{O}}=0$$
 \\
-Conclusion: Clearly the symmetry broken state $\ket{\Psi}$ isn't in a thermal equilibrium! Then shouldn't these states be unstable? 
+Conclusion: Clearly the symmetry broken state $\ket{\Psi}$ isn't in a thermal equilibrium! Then shouldn't these states be unstable?
 No. We do get to observe them in day-day life and these clearly unequivocally exist with large lifetimes(and hence are stable in the colloquial sense).
 How does this happen then? Ans - Due to the large singularity of thermodynamic limit. \\
 At Thermodynamic limit( $N\rightarrow \infty$, $V\rightarrow \infty$ with $\displaystyle{\frac{N}{V}=\; constant}$) :
@@ -102,13 +102,13 @@ Observation 3: Symmetric Hamiltonians (by symmetry here a global symmetry is imp
 \\
 Claim: The \textbf{global} symmetry breaking can be explained only by using $\hat{H}_0$ part of $\hat{H}$.\\
 \\
-Example: For a solid, the exact hamiltonian looks like 
+Example: For a solid, the exact hamiltonian looks like
 $$\hat{H}\;=\;\sum_i \frac{p_i^2}{2m}+\sum_{i<j}V(\Vec{r}_i-\Vec{r_j})$$
 Although the system has translational symmetry, when we observe daily life objects like a rock, they don't exhibit the symmetry of the hamiltonian i.e. they aren't delocalised over all space. Now for this, the collective part of the hamiltonian describes the C.O.M motion or the motion of N atoms on mass m moving in unison.\\
 In free space, this motion corresponds to a free particle with M = mN and the lowest energy level spacing scales as $\frac{1}{N}$.\\
 
 
-\textbf{Tower of States}: 
+\textbf{Tower of States}:
 These low lying energy levels of the solid makeup what's called the \textbf{tower of states}.
 Important to note that the states( which are eigenstates of $\hat{\Vec{P}}_{total}$ and hence behave like a \textbf{delocalised wave} over the whole space) are collective excitations of the whole system and as such are non-local.\\
 \\
@@ -126,10 +126,10 @@ Now what happens to stable states in this analysis?
     \item Now since low lying energy gap scales as $\displaystyle{\frac{1}{N}}$, for large N, they squeeze up and hence the energy uncertainty reduces for the stable SSB state.
     \item This makes them almost degenerate(i.e. $<E> \approx E_n$) in the large N limit and has energy close to exact GS of the hamiltonian(\textbf{Why?}).
     \item Overlap between SSB states now scales as $\exp{-N}$ and hence tunneling probability to another SSB state is suppressed.
-    
-    
-    \item Why are they stable? Simply because they are local(unlike the symmetric states), can be written as  $\bigotimes \ket{\Psi}_j$ and are stable against local perturbations. 
-   
+
+
+    \item Why are they stable? Simply because they are local(unlike the symmetric states), can be written as  $\bigotimes \ket{\Psi}_j$ and are stable against local perturbations.
+
 \end{itemize}
 \\
 Now for finite N, a symmetric H clearly cannot induce an SSB GS. One is forced to consider a \textbf{symmetry breaking perturbation} that singles out a particular SSB state out of the many degenerate,stable SSB states.\\
@@ -173,7 +173,7 @@ Resolution: Introduce a small symmetry breaking term in $\mathcal{H}$.
     \mathcal{H}\;=\;\sum_{\Vec{x},\Vec{\delta}} - \abs{J} \Vec{S}_{\Vec{x}}\cdot\Vec{S}_{\Vec{x }+\Vec{\delta}} - h\hat{n}\cdot\Vec{S}_{\Vec{x}}
 \end{align}
 i.e. essentially add a small magnetic field(set h=0 at the end).\\
-Now 
+Now
 \begin{enumerate}
     \item  $<M>$ = $Ns\hat{n}$ at T=0, for $s= M_{per\;spin}$.( think why)
     \item  A set of non-commuting limits emerge
