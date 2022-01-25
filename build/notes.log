@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.22)  25 JAN 2022 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.22)  25 JAN 2022 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -198,8 +198,23 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip52
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 10.
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 11.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -225,59 +240,44 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count276
 \Gm@cntv=\count277
 \c@Gm@tempcnt=\count278
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks23
 ) (build/notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count279
-\scratchdimen=\dimen160
-\scratchbox=\box50
-\nofMPsegments=\count280
-\nofMParguments=\count281
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count282
-\MPscratchDim=\dimen161
-\MPnumerator=\count283
-\makeMPintoPDFobject=\count284
-\everyMPtoPDFconversion=\toks25
-)))
-Package hyperref Info: Link coloring ON on input line 24.
+)
+Package hyperref Info: Link coloring ON on input line 25.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -285,16 +285,34 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count279
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
  (build/notes.out) (build/notes.out)
 \@outlinefile=\write3
 \openout3 = `notes.out'.
 
-
+ (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count280
+\scratchdimen=\dimen162
+\scratchbox=\box50
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen163
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks25
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -329,165 +347,289 @@ LaTeX Info: Redefining \nameref on input line 24.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 28.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 36--47
+Underfull \hbox (badness 10000) in paragraph at lines 37--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--47
+Underfull \hbox (badness 10000) in paragraph at lines 37--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--47
+Underfull \hbox (badness 10000) in paragraph at lines 37--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--67
+Underfull \hbox (badness 10000) in paragraph at lines 55--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--67
+Underfull \hbox (badness 10000) in paragraph at lines 55--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--67
+Underfull \hbox (badness 10000) in paragraph at lines 55--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--67
+Underfull \hbox (badness 10000) in paragraph at lines 55--69
 
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \begin{itemize}
+l.69 \begin{itemize}
                      [1]
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 69.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 71.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
 
  []
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 84--95
 
-./notes.tex:101: LaTeX Error: There's no line here to end.
+ []
+
+
+Overfull \hbox (198.07927pt too wide) in paragraph at lines 84--95
+\OT1/cmss/m/n/14.4 rium! Then shouldn't these states be un-sta-ble? >>>>>>> 9489f9c1991755217bb775afe0b44f6e44084282:main.tex
+ []
+
+
+./notes.tex:109: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.101 \textbf
+l.109 \textbf
              {Question}: What if the quantity $H_0\;=\int \hat{H}(\Vec{r_i},...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--130
 
  []
 
 [4]
 
-./notes.tex:135: LaTeX Error: There's no line here to end.
+./notes.tex:143: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 N
+l.143 N
        ow for finite N, a symmetric H clearly cannot induce an SSB GS. One i...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--143
+Underfull \hbox (badness 10000) in paragraph at lines 143--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--143
+Underfull \hbox (badness 10000) in paragraph at lines 143--151
 
  []
 
 
-Overfull \hbox (18.6539pt too wide) in paragraph at lines 147--148
+Overfull \hbox (18.6539pt too wide) in paragraph at lines 155--156
 \OT1/cmss/m/n/14.4 space. The rest of phase space isn't ac-ces-si-ble on \OT1/cmss/bx/n/14.4 ex-per-i-men-tal timescales\OT1/cmss/m/n/14.4 . 
  []
 
+[5]
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 151.
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 159.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
-[7] (build/notes.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 277--280
+
+ []
+
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 286.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 286.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 286.
+
+<Screen Shot 2020-07-22 at 19.42.20.png, id=131, 397.485pt x 317.185pt>
+File: Screen Shot 2020-07-22 at 19.42.20.png Graphic file (type png)
+<use Screen Shot 2020-07-22 at 19.42.20.png>
+Package pdftex.def Info: Screen Shot 2020-07-22 at 19.42.20.png  used on input line 290.
+(pdftex.def)             Requested size: 317.98842pt x 253.74832pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+[11 <./Screen Shot 2020-07-22 at 19.42.20.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
+
+ []
+
+<Screen Shot 2020-07-22 at 21.55.01.png, id=144, 346.29375pt x 102.3825pt>
+File: Screen Shot 2020-07-22 at 21.55.01.png Graphic file (type png)
+<use Screen Shot 2020-07-22 at 21.55.01.png>
+Package pdftex.def Info: Screen Shot 2020-07-22 at 21.55.01.png  used on input line 326.
+(pdftex.def)             Requested size: 242.40396pt x 71.66725pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--337
+
+ []
+
+
+Overfull \hbox (22.70256pt too wide) in paragraph at lines 321--337
+\OT1/cmss/m/n/14.4 As per an es-ti-mate, even with the low-est mea-sur-able force ($\OT1/cmr/m/n/14.4 10[]\OML/cmm/m/it/14.4 N; zeptonewton\OT1/cmr/m/n/14.4 )$\OT1/cmss/m/n/14.4 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--337
+
+ []
+
+[12 <./Screen Shot 2020-07-22 at 21.55.01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 346--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--350
+
+ []
+
+<IMG_20200722_230039.jpg, id=156, 2198.2125pt x 2402.9775pt>
+File: IMG_20200722_230039.jpg Graphic file (type jpg)
+<use IMG_20200722_230039.jpg>
+Package pdftex.def Info: IMG_20200722_230039.jpg  used on input line 353.
+(pdftex.def)             Requested size: 219.83412pt x 240.31183pt.
+[13 <./IMG_20200722_230039.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--384
+
+ []
+
+[14] [15] (build/notes.aux)
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 3C248BDEC2C5668C5079067E92AA55D3;878.
+(rerunfilecheck)             Checksum: 7D4B705B6DC638258C411F48075C0BBE;1779.
  ) 
 Here is how much of TeX's memory you used:
- 9837 strings out of 478994
- 140546 string characters out of 5858184
- 449886 words of memory out of 5000000
- 27175 multiletter control sequences out of 15000+600000
+ 10201 strings out of 478994
+ 146335 string characters out of 5858184
+ 460307 words of memory out of 5000000
+ 27471 multiletter control sequences out of 15000+600000
  409644 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,10n,89p,414b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rs
-fs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb>
-Output written on build/notes.pdf (8 pages, 151819 bytes).
+ 82i,11n,89p,414b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb>
+Output written on build/notes.pdf (16 pages, 1310602 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

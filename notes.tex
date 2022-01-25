@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{physics}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -23,9 +24,9 @@
 
 \begin{document}
 
-
+\begin{titlingpage}
 \maketitle
-
+\end{titlingpage}
 
 
 
@@ -36,7 +37,8 @@ Definition:
 When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$
 s.t. $\comm{\hat{H}}{U}=0$ (i.e. $\hat{U}$ is a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.\\
 \\
-Clarification: Corresponding to every physical symmetry operation (say $\mathcal{G}$, e.g. translation, rotation etc.) of the system, $\exists$ $\hat{U}$ to implement it in $\mathscr{H}$ (the corresponding Hilbert space). $\ket{\Psi}$ violates $\mathcal{G}$, not $\hat{U}$. \\
+Clarification: Corresponding to every physical symmetry operation (say $\mathcal{G}$, e.g. translation, rotation etc.) of the system, $\exists$ $\hat{U}$ to implement it in $\mathscr{H}$ (the corresponding Hilbert space). \\
+$\ket{\Psi}$ violates $\mathcal{G}$, not $\hat{U}$ (what I mean here is that observables that are extracted from $\ket{\Psi}$ don't have the same symmetry as $\mathcal{G}$). \\
 \newline
 Why is this baffling?\\
 Classically, we reason that since the equations governing the system are symmetric under $\mathcal{G}$, so should the actual state be (here I refer to classical state in a dynamical sense i.e look at macrostates). Hence Spontaneous symmetry breaking (a.k.a SSB) can be thought about understanding how symmetry in microscopic descriptions are broken on a macroscopic/grand scale.\\
@@ -73,6 +75,7 @@ In general $\comm{\hat{O}}{\hat{H}}\neq 0$ (however $\exists$ exceptional *cases
 \\
 Observation 2: For the general case, we can see that $\ket{\Psi}$ will not be an Energy eigenstate. Moreover, it cannot be a thermal mixture of energy eigenstates.\\
 Proof: Taking $\comm{\hat{O}}{\hat{H}}\neq 0$, it can't be an eigenket since that would imply $\hat{H}$ and $\hat{O}$ commute.
+<<<<<<< HEAD:notes.tex
 For the thermal mixture case, let
 $$\ket{\Psi}\;=\;\sum e^{-\beta E_n }\ket{n}$$
 $$\implies \hat{H}\ket{\Psi}\;=\;\pdv{\ket{\Psi}}{\beta}$$
@@ -81,6 +84,11 @@ $$\implies \hat{O}\hat{H}\ket{\Psi}\;= O \pdv{\ket{\Psi}}{\beta} $$
 $$\implies \comm{\hat{H}}{\hat{O}}=0$$
 \\
 Conclusion: Clearly the symmetry broken state $\ket{\Psi}$ isn't in a thermal equilibrium! Then shouldn't these states be unstable?
+=======
+For the thermal mixture case (?) - e.g. Crystal fallacy above.\\
+\newline
+Conclusion: Clearly the symmetry broken state $\ket{\Psi}$ isn't in a thermal equilibrium! Then shouldn't these states be unstable?
+>>>>>>> 9489f9c1991755217bb775afe0b44f6e44084282:main.tex
 No. We do get to observe them in day-day life and these clearly unequivocally exist with large lifetimes(and hence are stable in the colloquial sense).
 How does this happen then? Ans - Due to the large singularity of thermodynamic limit. \\
 At Thermodynamic limit( $N\rightarrow \infty$, $V\rightarrow \infty$ with $\displaystyle{\frac{N}{V}=\; constant}$) :
@@ -185,14 +193,203 @@ Now
     Suppose we start with a finite sample of spins and then take the thermodynamic limit of $\lim{N\to\infty}$. Now this limit can be taken at the behest of an **arbitrarily** small magnetic field. First we set $B=0$. Clearly none in the compact sample of spins get magnetised and now if we take thermodynamic limit, we find that the average spin was and still is 0.
     \item Now suppose we ramp up a small $B$ and let the compact sample acquire a small moment. Take $\lim{N\to\infty}$. Switch $B=0$. What we find now is that the sample still has a **net** moment. This holds for arbitrarily weak $B$. The spontaneity of the evolution comes from a qualitative change of outcome even in the presence of a minuscule \textbf{magnetic history}.
 \end{enumerate}
-Q. What was the point of getting to know "classically SSB states might not be degenerate"? - Clear to see. arbitrary
+Q. What was the point of getting to know "classically SSB states might not be degenerate"? - Clear to see.
+Arbitrary
 $\hat{n}$ leads to same energy in
 $\lim_{h\to 0}$, situation at 0 K.
 
 \section{Harmonic Crystal}
-Collective $\mathcal{H}$ calculation:-\\
+For an explicit example, take the harmonic crystal:-
+\begin{equation*}
+    \hat{H}\;=\;\sum_{\Vec{x}} \frac{\hat{P}^2(\vec{x})}{2m}+\sum_{\vec{x},\vec{\delta}}\frac{1}{2m}\;(\hat{X}(\vec{x})-\hat{X}(\vec{x}+\vec{\delta})\;)^2
+\end{equation*}
+where $\delta=\;(a,a,a)$ for a being the crystal spacing.
+We calculate here the collective $\mathcal{H}$.\\
+\newline
+Guess: $\mathcal{H}_{0}\;=\;\mathcal{H}_{COM}$. The COM is a particle of mass mN and momenta $\hat{P}_{COM}\;=\;\sum_i \hat{P}_i$.\\
+
+Observation: $\comm{H}{P_{com}}\;=\;0$.\\
+
+Legal consequences:
+\begin{itemize}
+    \item All eigenstates of the crystal are total-momentum eigenstates.
+    \item $\Delta P_{com}\;=\;0$, then $\Delta X_{com}=?$
+    \item So is the GS (i.e. your chair/crystal etc.) is an eigenstate?
+    \item Is it a thermal state? ;)
+\end{itemize}
+\newpage
+\subsection{Calculation of the collective Hamiltonian}
+$$  \hat{H}_{crystal}\;=\;\hat{H_0} + \sum_{\Vec{K}}\hat{H}_{\Vec{K}}$$
+Q. What does $\hat{H}_{\Vec{K}}$ physically indicates?\\
+Define formally the fourier transform of the operators as
+\begin{align}
+    \hat{X}(\Vec{r})\;&=\;\sum_{\Vec{k}} \hat{X}(\Vec{k}) e^{-i\Vec{k}\cdot\Vec{r}}\\
+    \hat{X}(\Vec{k})\;&=\;\int_{\mathcal{V}} e^{+i\Vec{k}\cdot\Vec{r}}\;\hat{X}(\Vec{r})\\
+    \hat{X}^{\dagger}(\Vec{k})\;&=\; \hat{X}(-\Vec{k})
+\end{align}
+In the same vein, we define
+\begin{align}
+ \hat{P}(\Vec{r})\;&=\;\sum_{\Vec{k}} \hat{P}(\Vec{k}) e^{i\Vec{k}\cdot\Vec{r}}\\
+    \hat{P}(\Vec{k})\;&=\;\int_{\mathcal{V}} e^{-i\Vec{k}\cdot\Vec{r}}\;\hat{P}(\Vec{r})\\
+    \hat{P}^{\dagger}(\Vec{k})\;&=\; \hat{P}(-\Vec{k})
+\end{align}
+The above definition ensures that the commutation relations in the new set are
+\begin{equation}
+    \comm{\hat{X}(\Vec{q})}{\hat{P}(\Vec{k})}\;=\;ih\;\delta^3(\Vec{q}-\Vec{k})
+\end{equation}
+Now,
+\begin{align}
+    \hat{P}_{com}\;&=\;\sum_{\Vec{x}} \hat{P}(\Vec{x})\\
+    \implies \hat{P}_{com}\;&=\sum_{\Vec{x}}\sum_{\Vec{k}} \hat{P}(\Vec{k}) e^{i\Vec{k}\cdot\Vec{x}}\\
+    \implies \hat{P}_{com}\;&=\sum_{\Vec{k}} \hat{P}(\Vec{k}) \delta^{3}(\Vec{k})\;\mathcal{V}\\
+    \implies \hat{P}_{com}\;&=\;\hat{P}(0)\mathcal{V}
+\end{align}
+where we used $\sum_{\Vec{r}}e^{i\Vec{k}\cdot\Vec{r}}\;=\;\delta^3(k)\;\mathcal{V}$, with $\mathcal{V}$ being the finite volume of the sample.\\
+Also,
+\begin{align}
+    \sum_{\Vec{x}} \hat{P}^2(x)\;&=\;\sum_{\Vec{x}}\;\sum_{\Vec{k},\Vec{q}} \hat{P}(\Vec{k})\hat{P}(\Vec{q})\;e^{i(\Vec{k}+\Vec{q})\cdot \Vec{x}}\\
+    &=\;\sum_{\Vec{k},\Vec{q}}\hat{P}(\Vec{k})\hat{P}(\Vec{q}) \delta^3(k+q)\;\mathcal{V}\\
+    &= \sum_{\Vec{k}} \hat{P}(\Vec{k}) \hat{P}(\Vec{-k}) \;\mathcal{V}
+\end{align}
+Taking the zero $\Vec{k}$ part, we have
+\begin{align}
+     \sum_{\Vec{x}} \hat{P}^2(x)\;&= \hat{P}(\Vec{0}) \hat{P}(\Vec{0})\;\mathcal{V}\\
+     &= \frac{1}{\mathcal{V}}\;\hat{P}^2_{com}
+\end{align}
+Now we can clearly see that( for the $\vec{k}\;=0$ part)
+\begin{equation}
+    \sum_{\Vec{x}} \frac{1}{2m}\hat{P}^2(x)\;=\;\frac{1}{2m\mathcal{V}}\;\hat{P}^2_{com}\;=\;\frac{\hat{P}^2_{com}}{2mN}
+\end{equation}
 
 
+Since $\mathcal{V} \sim N$. Now we perform the same steps on the harmonic part:-
+\begin{equation}
+    \sum_{\vec{x},\vec{\delta}} (\hat{X}(\vec{x})-\hat{X}(\vec{x}+\vec{\delta})\;)^2 = 4 \sum_{\vec{k}, \vec{\delta}} \hat{X}(\vec{k})\hat{X}(\vec{-k})\; sin^2(\frac{1}{2}\;\vec{k}\cdot\vec{\delta})
+\end{equation}
+ which yields no part when we take $\vec{k}=0$ part.
+
+Hence, to calculate the collective hamiltonian, we take $\vec{k}\;=0$ parts from (17) and (21) to get
+\begin{align}
+    \mathcal{H}_{collective}\;&=\;\frac{\hat{P}^2_{com}}{2mN}
+\end{align}
+
+
+\textbf{To explore SSB, we only take $\mathcal{H}_0$ part of $\hat{H}_{crystal}$}.\\
+\newline
+Why is it valid?
+\begin{itemize}
+    \item $\comm{P_{com}}{\hat{H}}=0$, hence good quantum numbers \textbf{of} one part are good quantum no.'s of other.
+    \item At extremely low temperatures, only the collective part of the Hamiltonian matters.\\
+        This is because phonon energies are much-much higher than the spectra of the collective hamiltonian. \textbf{(finite T?)}
+\end{itemize}
+\newpage
+\subsection{$\mathcal{\hat{H}}_0$ Spectrum}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{Screen Shot 2020-07-22 at 19.42.20.png}
+    \caption{Collective Spectrum}
+    \label{fig:my_label}
+\end{figure}
+\begin{align}
+    \mathcal{H}_{collective}\;&=\;\frac{\hat{P}^2_{com}}{2mN}
+\end{align}
+\begin{enumerate}
+    \item G.S: E=0, $\psi\;=1$ everywhere - delocalised with equal phase.
+    \item
+    $\Delta E\;\sim\;\frac{1}{N}$, the separation from GS and excitations with non-zero $P_{com}$.
+    \item As ${N\to\infty}$, tower collapses. Excited states become degenerate with GS.\\
+    No energy needed to excite a collective mode!
+    \item To make a crystal, simply make a wavepacket from these states with well defined $X_{com}$. What's $<E_{wavepacket}>$?\\
+    Clearly, as ${N\to\infty}$, it's 0. Hence we can see a crystal in thermodynamic limit.
+\end{enumerate}
+Of course real crystals are \textbf{not infinitely large}, and superpositions of momentum states \textbf{do} cost energy to create.\\
+\newline
+"How much energy is required for finite N to localise the system?"\\
+\newpage
+To account for the localisation energy, we add a \textbf{confining} potential that prevents delocalisation - In the end we'll set it to 0.\\
+Hence, we go with
+\begin{equation}
+    H_{pert}\;=\;\frac{\hat{P}^2_{com}}{2mN}+\;\mu X^2_{com}
+\end{equation}
+where $\mu$ is the strength of a potential that tends to localise the crystal at the origin of our coordinate system. \\
+\newline
+We get for the perturbed system
+\begin{align}
+    E_n\;&=\;h\omega\;(n+\frac{1}{2})\\
+    \Psi_0(x)\;&=\;(\frac{2mN\mu}{\pi^2h^2})^{\frac{3}{8}}\;e^{\displaystyle{-\sqrt{\frac{mN\mu}{2h^2}}x^2}}
+\end{align}
+with $\omega\;=\;\sqrt{\displaystyle{\frac{2\mu}{mN}}}$, $\sigma^2\;=\;\displaystyle{\frac{h}{\sqrt{2mN\mu}}}$.\\
+Signal of SSB:-
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{Screen Shot 2020-07-22 at 21.55.01.png}
+\end{figure}
+\\
+2nd limit signifies the \textbf{spontaneous} nature of the limit - for an $\infty$ large system, any perturbation, no matter how weak, is enough to completely localise the wave function in a single position.\\
+\newline
+Still, what about finite N? - For larger and larger pieces of matter,\\
+weaker and weaker perturbation suffices to make its ground state a localised wave packet!\\
+\newline
+As per an estimate, even with the lowest measurable force ($10^{-21}N, zeptonewton)$, for a 1cc piece of iron, localisation can be done to about $10^{-12}$ m.(2 orders of magnitude smaller than atomic lengthscales).\\
+\newline
+So we can see that for finite N, the minimum size of perturbation keeps reducing with increasing N.
+
+
+\newpage
+\subsection{Is it thermal ?}
+There is some competition between perturbation and thermal fluctuations.\\
+Perturbations localise the system(i.e. break symmetry), while thermal fluctuations thermalize the system.\\
+So one could in principle replace the formula
+\begin{equation*}
+    <G>\;=\;Tr(\rho \;\hat{G})
+\end{equation*}
+and carry out the trace in the new basis of SSB states, since these are the only stable states. Turns out, this is not correct! (why?)\\
+\newline
+Why don't we jump from one SSB state to another?\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.1]{IMG_20200722_230039.jpg}
+\end{figure}
+
+\begin{align*}
+    \Delta P &\sim \frac{1}{\delta}\\
+    \implies \Delta E &\sim \frac{1}{\mathcal{V}}*\frac{1}{\delta^2}\\
+    \implies \Delta t &\sim \mathcal{V}\delta^2 \to\infty
+\end{align*}
+
+Hence ergodicity breaks and system only explores a reduced part of the phase-space.
+\newpage
+
+\subsection{What about non-zero $\vec{k}$ part of $H_{crystal}$ ?}
+We collect terms with non-zero $\vec{k}$ part of the hamiltonian to get
+\begin{equation}
+    \sum_{\Vec{k}} \frac{1}{2m}\hat{P}(\Vec{k}) \hat{P}(\Vec{-k}) \;\mathcal{V} + \frac{m\omega^2}{2} \sum_{\vec{k}, \vec{\delta}} \hat{X}(\vec{k})\hat{X}(\vec{-k})\; 4sin^2(\frac{1}{2}\;\vec{k}\cdot\vec{\delta}) \mathcal{V}
+\end{equation}
+Let's work in 1-D for the time being. Then the $\vec{\delta}$ summation drops out to one term,
+\begin{equation*}
+   \sum_{\vec{k}, \vec{\delta}} \hat{X}(\vec{k})\hat{X}(\vec{-k})\; 4sin^2(\frac{1}{2}\;\vec{k}\cdot\vec{\delta}) = \sum_{\vec{k}} \hat{X}^{\dagger}(\vec{k})\hat{X}(\vec{k})\; 4sin^2(\frac{1}{2}\;ka)
+\end{equation*}
+where a is the crystal spacing. So we arrive at
+\begin{align}
+    H_{int}\;&=\;\sum_{{k}} \displaystyle{\frac{1}{2m}}\hat{P}^{\dagger}(\Vec{k}) \hat{P}(\Vec{k}) \;\mathcal{V} + \frac{m\omega^2}{2} \sum_{\vec{k}} \hat{X}^{\dagger}(\vec{k})\hat{X}(\vec{k})\; 4sin^2(\frac{1}{2}\;ka)\mathcal{V}\\
+    &= \sum_{{k}}\displaystyle{\frac{1}{2m}}\hat{P}^{\dagger}(\Vec{k}) \hat{P}(\Vec{k}) +  \frac{m\omega^2}{2} \hat{X}^{\dagger}(\vec{k})\hat{X}(\vec{k})\; 4sin^2(\frac{1}{2}\;ka)
+\end{align}
+which are a set of harmonic oscillators with frequencies $\omega_{k}\;=\;2\omega sin(\displaystyle{\frac{ka}{2}})$. \\
+This corresponds to\textbf{ phonon-dispersion relation} for a 1d chain.\\
+For small k, we get $\omega_k\;=\;(\omega a)k $, which corresponds to \textbf{goldstone modes}.\\
+\newline
+Elitzur's theorem - Local symmetries cannot be broken by such a mechanism.
+
+\newpage
+\subsection{Questions}
+
+\begin{itemize}
+    \item Can we smoothly go from one broken symmetry GS to another? What about to symmetric phase?
+    \item Every time a global symmetry is broken, there $\exists$ a local variable that has long range order/correlations??
+    \item SSB GS make a way to classify various phases of matter. And we know from day-day experience that one can typically change various parameters of the environment to trigger a phase transition. Then why is there a distinction between classical $\&$ quantum phase transitions?
+\end{itemize}
 
 
 \end{document}
