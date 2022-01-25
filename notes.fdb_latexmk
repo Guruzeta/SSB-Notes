@@ -1,0 +1,15 @@
+# Fdb version 3
+["pdflatex"] 1643125155 "notes.tex" "notes.pdf" "notes" 1643125155
+  "/Users/apple/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/Users/apple/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls" 1622581934 20144 0fe9067680219956678b52f12bdce8ee ""
+  "/Users/apple/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty" 1622581934 5049 969aec05d5f39c43f8005910498fcf90 ""
+  "/Users/apple/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo" 1622581934 8449 6d2bb4e793199f4e5ccb1cfc6d242d27 ""
+  "/Users/apple/Library/TinyTeX/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
+  "/Users/apple/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1632658387 1407280 0ecaf16d0123961475de709488bf8c8c ""
+  "/Users/apple/Library/TinyTeX/texmf.cnf" 1632658351 614 6ac0f7114afdf26402b4fc286485d5f9 ""
+  "notes.aux" 1643125155 32 3985256e7290058c681f74d7a3565a19 ""
+  "notes.tex" 1643125122 24685 f091163fc323f07fb2fca327c432bef2 ""
+  "physics.sty" 0 -1 0 ""
+  (generated)
+  "notes.log"
+  "notes.pdf"

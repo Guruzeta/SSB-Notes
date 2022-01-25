@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1643124840 "notes.tex" "build/notes.pdf" "notes" 1643124858
+["pdflatex"] 1643125331 "notes.tex" "build/notes.pdf" "notes" 1643125333
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcss1440.tfm" 1136768653 1536 20b080237b56d4b67bdb3a5b0a64b2f8 ""
@@ -104,11 +104,11 @@
   "IMG_20200722_230039.jpg" 1643124584 1112286 af85dce7cd285e47d379fb63fe5ff853 ""
   "Screen Shot 2020-07-22 at 19.42.20.png" 1643124584 19104 7a38cfdf88f0be2af80d3bd4f9d5a012 ""
   "Screen Shot 2020-07-22 at 21.55.01.png" 1643124584 16404 b9a32d2b5519ca0a987261b3c9c0c682 ""
-  "build/notes.aux" 1643124842 2194 b9435f7d39a751d911364e64e4e41388 "pdflatex"
-  "build/notes.out" 1643124842 1779 7d4b705b6dc638258c411f48075c0bbe "pdflatex"
-  "notes.tex" 1643124857 24685 f091163fc323f07fb2fca327c432bef2 ""
+  "build/notes.aux" 1643125333 2194 b9435f7d39a751d911364e64e4e41388 "pdflatex"
+  "build/notes.out" 1643125333 1779 7d4b705b6dc638258c411f48075c0bbe "pdflatex"
+  "notes.tex" 1643125330 24685 f091163fc323f07fb2fca327c432bef2 ""
   (generated)
   "build/notes.aux"
-  "build/notes.out"
-  "build/notes.log"
   "build/notes.pdf"
+  "build/notes.log"
+  "build/notes.out"
