@@ -22,7 +22,7 @@
 \usepackage[a4paper, left=1in, right=1in, top=1in, bottom=1in]{geometry}
 \title{\Huge{Notes on Spontaneous Symmetry Breaking}}
 \author{\Large{Guru Kalyan Jayasingh}}
-
+\date{\phantom}
 
 \begin{document}
 
@@ -33,7 +33,7 @@
 \begin{center}
     \bf{Abstract}
 \end{center}
-Some points regarding spontaneous symmetry breaking in condensed matter and field theory setting are noted.
+Some points regarding spontaneous symmetry breaking in condensed matter and quantum field theories are noted.
 
 \tableofcontents
 
@@ -43,8 +43,13 @@ Some points regarding spontaneous symmetry breaking in condensed matter and fiel
 
 \subsection{Definition}
 
-When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$
-s.t. $\comm{\hat{H}}{U}=0$ (i.e. $\hat{U}$ is a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.\\
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    When the state $\ket{\Psi}$ isn't invariant under the symmetry operator $\hat{U}$
+    s.t. $\comm{\hat{H}}{U}=0$ (i.e. $\hat{U}$ is a symmetry of the system), then the *\textbf{state}* is said to have spontaneously broken the symmetry.
+    }%
+}
+\\
 
 Clarification: Corresponding to every physical symmetry operation (say $\mathcal{G}$, e.g. translation, rotation etc.) of the system, $\exists$ $\hat{U}$ to implement it in $\mathscr{H}$ (the corresponding Hilbert space).
 $\ket{\Psi}$ violates $\mathcal{G}$, not $\hat{U}$ (what I mean here is that observables that are extracted from $\ket{\Psi}$ don't have the same symmetry as $\mathcal{G}$).
@@ -65,10 +70,9 @@ However look at the following
 \end{align*}
 Hence density cannot stay modulated and a crystal cannot be observed, contrary to empirical observation. So what gives?\\
 Clearly one of our assumptions while using statistical averages is wrong and as it turns out, it's the assumption of \textbf{ergodicity}. We'll see how it comes, but the gist is that on experimental timescales, system cannot explore all parts of the phase space with some statistical weight.\\
-\\
-Caution: SSB isn't a purely quantum phenomenon.\\
+Caution: SSB isn't a purely quantum phenomenon.
 \newline
-In the spirit of QFT, one can say that SSB describes systems in which $\mathcal{L}$ has a symmetry, but the lowest order vacuum solutions don't possess the said symmetry (although we'll explore the statistical side of SSB, leaving such cases aside).\\
+In QFT, SSB describes systems in which $\mathcal{L}$ (or action $S$) in invariant under a symmetry (more specifically under some group $G$ s.t.$\forall g\varepsilon G$, $S[g\psi] =  S[\psi]$ where $ \psi$ is any field configuration), but the lowest energy vacuum solutions don't possess the said symmetry (although we'll first explore the statistical side of SSB).\\
 \\
 Observation 1: For every such $\ket{\Psi}$, there exists a multitude of states $\ket{\Phi}$ s.t. they're degenerate.
 One can generate the set {$\ket{\Phi}$} by the rule $\ket{\Phi}\;=\;\hat{U}\ket{\Psi}$.\\
